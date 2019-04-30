@@ -1,0 +1,11 @@
+{
+  "name": "ss-iteso-back",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:Kireck211/ss-iteso-back.git",
+  "author": "kireck211 <erickdesantiago11@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
