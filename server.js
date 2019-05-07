@@ -4,6 +4,10 @@ var path = require("path");
 
 app.use("/assets", express.static(path.join(__dirname, "./dist/assets/")));
 
+app.get("/favicon.ico", function(req, res) {
+  res.sendFile(path.join(__dirname, "./dist/favicon.ico"));
+});
+
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
