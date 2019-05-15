@@ -1,11 +1,33 @@
 {
   "name": "ss-iteso-back",
+  "productName": "",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "electron.js",
   "repository": "git@github.com:Kireck211/ss-iteso-back.git",
   "author": "kireck211 <erickdesantiago11@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "electron-is-dev": "^1.1.0",
     "express": "^4.16.4"
+  },
+  "scripts": {
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3005 && electron .\"",
+    "electron-pack": "build --em.main=electron.js"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "com.argeslab.ss",
+    "files": [
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "dist"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.1",
+    "electron-packager": "^13.1.1",
+    "wait-on": "^3.2.0"
   }
 }
